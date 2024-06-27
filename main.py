@@ -24,8 +24,9 @@ def model_predict(water:Water):
         'Sulfate': water.Sulfate,
         'Conductivity': water.Conductivity,
         'Organic_carbon': water.Organic_carbon,
-        'Trihalomethanes': water.Trihalomethanes
-        'Turbidity': water.Turbidity, 
+        'Trihalomethanes': water.Trihalomethanes,
+        'Turbidity': water.Turbidity
+    
     }, index=[0])
     # Load the RandomForest model once when the application starts
 
@@ -35,3 +36,4 @@ def model_predict(water:Water):
         return "Water is Consumable"
     else:
         return "Water is not consumable"
+
