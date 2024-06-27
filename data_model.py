@@ -10,7 +10,8 @@ class Water(BaseModel):
     Organic_carbon: float
     Trihalomethanes: float
     Turbidity: float
-   
     
+
+
     
 
