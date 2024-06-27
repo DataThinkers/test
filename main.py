@@ -17,15 +17,15 @@ def index():
 @app.post("/predict")
 def model_predict(water:Water):
     sample = pd.DataFrame({
+        'ph': water.ph,
         'Hardness': water.Hardness,
         'Solids': water.Solids,
         'Chloramines': water.Chloramines,
+        'Sulfate': water.Sulfate,
         'Conductivity': water.Conductivity,
         'Organic_carbon': water.Organic_carbon,
-        'Turbidity': water.Turbidity,
-        'ph': water.ph,
-        'Sulfate': water.Sulfate,
         'Trihalomethanes': water.Trihalomethanes
+        'Turbidity': water.Turbidity, 
     }, index=[0])
     # Load the RandomForest model once when the application starts
 
